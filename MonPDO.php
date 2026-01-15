@@ -5,13 +5,11 @@ class MonPDO
     // Attribut statique qui stocke l'unique instance de PDO
     private static ?PDO $pdo = null;
 
-    /**
-     * Retourne une instance de PDO connectée à la base "animals"
-     */
+    // Retourne une instance de PDO connectée à la base "catalogue"
     public static function getPDO(): PDO
     {
         if (self::$pdo === null) {
-            // ⚠ Si ta BD s'appelle autrement, change "animals"
+            // Si ma BD s'appelle autrement, change "catalogue"
             $dsn = 'mysql:host=localhost;
             dbname=catalogue;
             charset=utf8';
