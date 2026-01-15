@@ -10,7 +10,7 @@ body {
 }
 
 .title {
-    background: #e31b2f;
+    background: #007dff;
     color: white;
     padding: 15px;
     margin-bottom: 20px;
@@ -65,7 +65,7 @@ body {
 }
 
 .btn {
-    background: #e31b2f;
+    background: #007dff;
     color: white;
     padding: 8px 12px;
     text-decoration: none;
