@@ -15,6 +15,30 @@ require_once __DIR__ . "/TypeDAO.php";
 <div class="container">
   <h1 class="title">Catalogue des cours</h1>
 
+<!-- Filtre par type -->
+
+<div class="filters">
+  <details class="dropdown">
+    <summary class="dropdown-btn">
+      Filtrer par type
+    </summary>
+
+    <div class="dropdown-menu">
+      <a class="drop-item <?php echo ($typeSelected === 'tous') ? 'active' : ''; ?>" href="?type=tous">Tous</a>
+
+      <?php foreach ($types as $t): ?>
+        <a
+          class="drop-item <?php echo ((string)$typeSelected === (string)$t->getIdType()) ? 'active' : ''; ?>"
+          href="?type=<?php echo $t->getIdType(); ?>"
+        >
+          <?php echo $t->getLibelle(); ?>
+        </a>
+      <?php endforeach; ?>
+    </div>
+  </details>
+</div>
+
+<!-- Cartes -->
   <div class="grid">
     <?php foreach ($produits as $p): ?>
 

@@ -93,3 +93,58 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
+
+/* Filtre déroulant */
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-btn{
+    list-style: none;              
+    cursor: pointer;
+    background: #044b86;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    user-select: none;
+}
+
+
+.dropdown-btn::-webkit-details-marker{
+    display:none;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 42px;
+    left: 0;
+    min-width: 200px;
+    background: white;
+    border: 1px solid #e3e6ee;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    padding: 8px;
+    z-index: 10;
+}
+
+.drop-item{
+    display: block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.drop-item:hover{
+    background: #f1f5ff;
+}
+
+.drop-item.active{
+    background: #030012;
+    color: white;
+}
